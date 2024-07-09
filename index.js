@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const Logo = require("./lib/logo");
-const colors = require("colors")
+const circle = require("./lib/shapes")
 // const fs = require ("fs");
 
 inquirer
@@ -31,7 +31,7 @@ inquirer
     ])
     .then((response) => {
      
-    
+    render(response);
 console.log(`Test your ${response.name}`);
         console.log(`Your selection is a ${response.color} ${response.name} text on top of a ${response.shapeColor} ${response.shape} shape.`)
     } );
