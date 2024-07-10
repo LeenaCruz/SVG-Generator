@@ -3,34 +3,6 @@ const Logo = require("./lib/logo");
 const {Circle, Square, Triangle} = require("./lib/shapes")
 const fs = require ("fs");
 
-// function render(response) {
-
-//     //  switch (response.shape) {\
-//     // const circle = new Circle(color)
-//     //   case Circle:
-//     //  Circle.render();
-//     //  break;
-//     //  case Square:
-//     //         Square.render;
-//     //         break;
-//     //         case Triangle: 
-//     //         Triangle.render;
-//     // }
-
-//     // if (response.shape === "Circle") {
-//         const shape = `<rect x="10" y="10" width="30" height="30"  fill="${this.color}"/>`
-//     //     return shape;
-//     // }
-
-
-//    return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg
-//    ${response.shape}
-//    ${Circle}>
-// `
-
-// }
-
-
 inquirer
     .prompt([
         {
@@ -74,15 +46,7 @@ else if(response.shape === 'Triangle') {
     svg = triangle.render();
 } 
 
-
-
-fs.writeFile('circle.svg', svg, err => err ? console.error('failed to write file') : console.log('success'))
+fs.writeFile('logo.svg', svg, err => err ? console.error('failed to write file') : console.log('success'))
 }
 )
     
-    //  const shape = response.shape;
-// render(shape);
-// console.log(`Test your ${response.name}`);
-//         console.log(`Your selection is a ${response.color} ${response.name} text on top of a ${response.shapeColor} ${response.shape} shape.`)
-        
-//     } );
