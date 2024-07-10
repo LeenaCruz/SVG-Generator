@@ -61,10 +61,18 @@ inquirer
     //     fs.writeFile('logo.svg', render(response), err => err ? console.error('failed to write file') : console.log('success'))
 console.log(response)
 let svg;
-// if (response.shape === Circle) { 
+if (response.shape === 'Circle') { 
 const circle = new Circle(response.text, response.fontColor, response.shapeColor)
  svg = circle.render();
-// }
+} 
+else if (response.shape === 'Square') {
+    const square = new Square(response.text, response.fontColor, response.shapeColor)
+    svg = square.render();
+} 
+else if(response.shape === 'Triangle') {
+    const triangle = new Triangle(response.text, response.fontColor, response.shapeColor)
+    svg = triangle.render();
+} 
 
 
 
