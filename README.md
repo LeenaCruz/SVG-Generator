@@ -16,5 +16,5 @@ SO THAT I don't have to pay a graphic designer
 Thanks to: 
 Akon,
 Neil and
-Matt 
+Matt.
 
