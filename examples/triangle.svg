@@ -1,4 +1,4 @@
    <svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="150, 18 244, 182 56, 182"  fill="Pink"/>
-    <text x="150" y="130" fill="red" font-size="30px" text-anchor="middle" alignment-baseline="middle">SVG</text></svg>
+  <polygon points="150, 18 244, 182 56, 182"  fill="Yellow"/>
+    <text x="150" y="130" fill="purple" font-size="30px" text-anchor="middle" alignment-baseline="middle">Lee</text></svg>
   
