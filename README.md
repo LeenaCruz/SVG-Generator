@@ -14,7 +14,7 @@ SO THAT I don't have to pay a graphic designer
 ![Video walkthrough of the command line prompt asking for text, font color, shape and shape color](./images/svgGIF.gif)
 ## Credits 
 Thanks to: 
-Akon
-Neil
+Akon,
+Neil and
 Matt 
 
