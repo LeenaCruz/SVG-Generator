@@ -3,13 +3,32 @@ const Logo = require("./lib/logo");
 const {Circle, Square, Triangle} = require("./lib/shapes")
 const fs = require ("fs");
 
-function render(response) {
-   return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>`
+// function render(response) {
 
-}
+//     //  switch (response.shape) {\
+//     // const circle = new Circle(color)
+//     //   case Circle:
+//     //  Circle.render();
+//     //  break;
+//     //  case Square:
+//     //         Square.render;
+//     //         break;
+//     //         case Triangle: 
+//     //         Triangle.render;
+//     // }
+
+//     // if (response.shape === "Circle") {
+//         const shape = `<rect x="10" y="10" width="30" height="30"  fill="${this.color}"/>`
+//     //     return shape;
+//     // }
 
 
+//    return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg
+//    ${response.shape}
+//    ${Circle}>
+// `
 
+// }
 
 
 inquirer
@@ -17,13 +36,13 @@ inquirer
         {
             type: "input",
             message: "Write 3 letters for your logo.",
-            name: "name",
+            name: "text",
             // Limitar a que solo sean 3 caracteres
         },
         {
             type: "input",
             message: "Choose a color (use name or hexadecimal code)",
-            name: "color",
+            name: "fontColor",
         },
         {
             type: "list",
@@ -38,7 +57,21 @@ inquirer
         }
 
     ])
-    .then((response) =>  fs.writeFile('logo.svg', render(response), err => err ? console.error('failed to write file') : console.log('success')))
+    .then((response) => {
+    //     fs.writeFile('logo.svg', render(response), err => err ? console.error('failed to write file') : console.log('success'))
+console.log(response)
+let svg;
+// if (response.shape === Circle) { 
+const circle = new Circle(response.text, response.fontColor, response.shapeColor)
+ svg = circle.render();
+// }
+
+
+
+fs.writeFile('circle.svg', svg, err => err ? console.error('failed to write file') : console.log('success'))
+}
+)
+    
     //  const shape = response.shape;
 // render(shape);
 // console.log(`Test your ${response.name}`);
